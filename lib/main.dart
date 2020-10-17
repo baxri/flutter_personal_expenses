@@ -24,6 +24,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text('Flutter App')),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
               width: double.infinity,
@@ -40,14 +41,13 @@ class MyHomePage extends StatelessWidget {
                       child: Row(
                     children: [
                       Container(
-                          width: 80,
                           alignment: Alignment.center,
                           margin: EdgeInsets.all(10),
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                               border:
                                   Border.all(color: Colors.purple, width: 2)),
-                          child: Text(transaction.amount.toString(),
+                          child: Text('\$${transaction.amount}',
                               style: TextStyle(
                                   color: Colors.purple,
                                   fontWeight: FontWeight.bold,
